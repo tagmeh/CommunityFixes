@@ -1,0 +1,7 @@
+## Interface: 100002
+## Version: 1.0.0
+## Title: CommunityFix
+## Notes: A small addon make some fixes to the Community feature.
+## Author: Taggy
+
+CommunityFixes.lua
