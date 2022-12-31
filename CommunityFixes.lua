@@ -1,7 +1,9 @@
-CommunityFixes = LibStub("AceAddon-3.0"):NewAddon("CommunityFixes")
+CommunityFixes = LibStub("AceAddon-3.0"):NewAddon("CommunityFixes", "AceEvent-3.0")
 
 CommunityFixes.Version = "1.0.0"
 
+local GetTime = GetTime
+local GetChannelList = GetChannelList
 
 function GetJoinedChannels()
   -- 
@@ -29,7 +31,29 @@ function FixCommunityChannels(channels)
   print('CommunityFixes: Refreshed Community Channels')
 end
 
+function CommunityFixes:CHANNEL_UI_UPDATE()
+  print("CHANNEL_UI_UPDATE")
+  if GetTime() <= PlayerEnteredWorldAtTime + 60 then
+    FixCommunityChannels(GetJoinedChannels())
+  else
+    print(GetTime() - (PlayerEnteredWorldAtTime + 60))
+    CommunityFixes:UnregisterEvent('CHANNEL_UI_UPDATE')
+    print('Unregistered CHANNEL_UI_UPDATE')
+  end
+end
+
 function CommunityFixes:OnInitialize()
-  print('CommunityFixes: Initialized')
+  print('CommunityFixes: Initalizing')
+  CommunityFixes:RegisterEvent('CHANNEL_UI_UPDATE')
+  PlayerEnteredWorldAtTime = GetTime()
+  print('CommunityFixes: Initialization Complete')
+end
+
+function CommunityFixes:OnEnable()
+  print('CommunityFixes: Enabled')
   FixCommunityChannels(GetJoinedChannels())
+end
+
+function CommunityFixes:OnDisable()
+  print('CommunityFixes: Disabled')
 end

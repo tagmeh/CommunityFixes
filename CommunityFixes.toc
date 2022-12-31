@@ -4,4 +4,5 @@
 ## Notes: A small addon make some fixes to the Community feature.
 ## Author: Taggy
 
+embeds.xml
 CommunityFixes.lua
