@@ -1,8 +1,13 @@
 ## Interface: 100002
 ## Version: 1.0.0
-## Title: CommunityFix
+## Title: CommunityFixes
 ## Notes: A small addon make some fixes to the Community feature.
 ## Author: Taggy
 
 embeds.xml
+Core.lua
+Utils.lua
+
+Modules/ComChatBugFix.lua
+
 CommunityFixes.lua
