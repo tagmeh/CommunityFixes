@@ -24,7 +24,7 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0 # reads history for commit changelog
 
@@ -34,10 +34,10 @@ jobs:
           input: CHANGELOG.md
           output: RECENT_CHANGES.md
 
-      - name: Create Mainline Package
-        uses: BigWigsMods/packager@master
+      - name: Package and release
+        uses: BigWigsMods/packager@v2
         with:
-          args: -S
+          args: -d
         env:
            CF_API_KEY: ${{ secrets.CF_API_KEY }}
            WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
