@@ -4,6 +4,11 @@
 ## Notes: A small addon make some fixes to the Community feature.
 ## Author: Taggy
 
+## X-Curse-Project-ID: 
+## X-WoWI-ID: 
+## X-Wago-ID: 
+
+
 embeds.xml
 Core.lua
 Utils.lua
