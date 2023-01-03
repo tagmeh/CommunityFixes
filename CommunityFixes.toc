@@ -1,5 +1,5 @@
 ## Interface: 100002
-## Version: 1.0.0
+## Version: 1.1.0
 ## Title: CommunityFixes
 ## Notes: A small addon make some fixes to the Community feature.
 ## Author: Taggy
