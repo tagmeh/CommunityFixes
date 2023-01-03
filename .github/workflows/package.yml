@@ -25,12 +25,13 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout Repo
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0 # reads history for commit changelog
 
+      - name: Recent Changes from the changelog
       - uses: kemayo/actions-recent-changelog@v1
-        if: startsWith(github.ref, 'refs/tags')
         with:
           input: CHANGELOG.md
           output: RECENT_CHANGES.md
