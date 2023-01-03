@@ -1,7 +1,7 @@
 ## Version 1.1.0 
 1/2/23
 ### Changed
-- Modularized code into individual files.
+- Modularized code into individual files. 
 
 ## Version 1.0.0 
 12/28/23
