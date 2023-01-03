@@ -1,6 +1,5 @@
 name: Package and Release (Mainline)
 
-on: workflow_dispatch
 on:
   push:
     branches: [ main ]
