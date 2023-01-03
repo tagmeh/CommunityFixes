@@ -6,6 +6,7 @@ on:
     tags: [ '*' ]
     paths-ignore:
       - '.github/**'
+  workflow_dispatch:
 
 jobs:
   #lint:
