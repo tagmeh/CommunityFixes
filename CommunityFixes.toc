@@ -4,7 +4,7 @@
 ## Notes: A small addon make some fixes to the Community feature.
 ## Author: Taggy
 
-## X-Curse-Project-ID: 
+## X-Curse-Project-ID: 768186
 ## X-WoWI-ID: 
 ## X-Wago-ID: 
 
